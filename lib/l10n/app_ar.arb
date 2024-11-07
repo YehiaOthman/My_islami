@@ -1,0 +1,19 @@
+{
+  "apptitle": "اسلامي",
+  "versename": "اسم السوره",
+  "verseNum": "عدد الايات",
+  "qurantab": "قران",
+  "hadithtab": "حديث",
+  "sebhatab": "سبحه",
+  "radiotab": "راديو",
+  "settingstab": "اعدادات",
+  "tasbehcounter": "عدد التسيبحات",
+  "hadithnames": "الاحاديث",
+  "theme": "السمه",
+  "language": "اللغه",
+  "english": "english",
+  "arabic": "العربيه",
+  "selectedlang": "العربيه",
+  "light": "فاتح",
+  "dark": "داكن"
+}
