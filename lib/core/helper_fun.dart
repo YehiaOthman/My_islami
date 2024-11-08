@@ -7,4 +7,9 @@ class HelperFun{
     var myProvider = Provider.of<SettingProvider>(context,listen: false);
     return myProvider.currentTheme == ThemeMode.light;
   }
+
+  static bool isEn(BuildContext context){
+    var myProvider = Provider.of<SettingProvider>(context,listen: false);
+    return myProvider.currentLocale == 'en';
+  }
 }

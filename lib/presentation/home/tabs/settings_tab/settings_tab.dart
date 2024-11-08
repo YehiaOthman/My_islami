@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:my_qauran_app/config/styles/dark_app_styles.dart';
 import 'package:my_qauran_app/config/styles/light_app_styles.dart';
-import 'package:my_qauran_app/config/theme/theme.dart';
 import 'package:my_qauran_app/core/helper_fun.dart';
 import 'package:my_qauran_app/presentation/home/tabs/settings_tab/widgets/languageBottomSheet.dart';
 import 'package:my_qauran_app/presentation/home/tabs/settings_tab/widgets/themeBottomSheet.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-
 import '../../../../core/colors_manger.dart';
 
 class SettingsTab extends StatefulWidget {
@@ -49,7 +47,7 @@ class _SettingsTabState extends State<SettingsTab> {
                 child: Row(
                   children: [
                     Text(
-                      AppLocalizations.of(context)!.light,
+                      HelperFun.isLight(context) ? AppLocalizations.of(context)!.light : AppLocalizations.of(context)!.dark,
                       style:HelperFun.isLight(context) ?  LightAppStyles.selectedTheme : DarkAppStyles.selectedTheme,
                     ),
                   ],
