@@ -35,7 +35,7 @@ class _SebhaTabState extends State<SebhaTab> {
               Positioned(
                   child: Center(
                 child: Image.asset(
-                  AssetsManger.sebhaHead,
+                  HelperFun.isLight(context) ? AssetsManger.sebhaHead : AssetsManger.sebhaHeadDarkTheme,
                 ),
               )),
               Positioned(
@@ -45,7 +45,7 @@ class _SebhaTabState extends State<SebhaTab> {
                   child: Transform.rotate(
                     angle: angle,
                     child: Image.asset(
-                      AssetsManger.sebhaBody,
+                      HelperFun.isLight(context) ? AssetsManger.sebhaBody : AssetsManger.sebhaBodyDarkTheme,
                       width: 330,
                     ),
                   ),

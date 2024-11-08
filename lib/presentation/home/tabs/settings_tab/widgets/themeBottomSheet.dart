@@ -28,34 +28,48 @@ class _ThemebottomsheetState extends State<Themebottomsheet> {
         child: Column(
           children: [
             InkWell(
-              onTap: () => myProvider.switchTheme(AppLocalizations.of(context)!.light),
-                child:HelperFun.isLight(context) ? selectedThemeWidget(AppLocalizations.of(context)!.light) : unSelectedThemeWidget(AppLocalizations.of(context)!.light)),
-            const SizedBox(height: 10,),
+              onTap: () => myProvider.switchTheme('light'),
+              child: HelperFun.isLight(context)
+                  ? selectedThemeWidget(AppLocalizations.of(context)!.light)
+                  : unSelectedThemeWidget(AppLocalizations.of(context)!.light),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             InkWell(
-              onTap: () => myProvider.switchTheme(AppLocalizations.of(context)!.dark),
-                child:HelperFun.isLight(context) ?  unSelectedThemeWidget(AppLocalizations.of(context)!.dark) : selectedThemeWidget(AppLocalizations.of(context)!.dark))
+              onTap: () => myProvider.switchTheme('dark'),
+              child: HelperFun.isLight(context)
+                  ? unSelectedThemeWidget(AppLocalizations.of(context)!.dark)
+                  : selectedThemeWidget(AppLocalizations.of(context)!.dark),
+            )
           ],
         ),
       ),
     );
   }
-  Widget selectedThemeWidget(String selectedTheme){
-   return Row(
+
+  Widget selectedThemeWidget(String selectedTheme) {
+    return Row(
       children: [
-        Text(
-          selectedTheme,
-          style: HelperFun.isLight(context) ? LightAppStyles.selectedThemeWidget : DarkAppStyles.selectedThemeWidget),
+        Text(selectedTheme,
+            style: HelperFun.isLight(context)
+                ? LightAppStyles.selectedThemeWidget
+                : DarkAppStyles.selectedThemeWidget),
         const Spacer(),
-        const Icon(Icons.check ,)
+        const Icon(
+          Icons.check,
+        )
       ],
     );
   }
-  Widget unSelectedThemeWidget(String unSelectedTheme){
-   return Row(
+
+  Widget unSelectedThemeWidget(String unSelectedTheme) {
+    return Row(
       children: [
-        Text(
-          unSelectedTheme,
-          style: HelperFun.isLight(context) ? LightAppStyles.unSelectedThemeWidget : DarkAppStyles.unSelectedLanguageWidget),
+        Text(unSelectedTheme,
+            style: HelperFun.isLight(context)
+                ? LightAppStyles.unSelectedThemeWidget
+                : DarkAppStyles.unSelectedThemeWidget),
       ],
     );
   }

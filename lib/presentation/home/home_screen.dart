@@ -24,11 +24,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool flag = true;
   List<Widget> tabs = [
-    QuranTab(),
-    HadithTab(),
-    SebhaTab(),
-    RadioTab(),
-    SettingsTab(),
+    const QuranTab(),
+    const HadithTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const SettingsTab(),
   ];
 
   int selectedItem = 0;
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title:  Text(AppLocalizations.of(context)!.apptitle,
+            title:  Text(AppLocalizations.of(context)!.apptitle  ,
               style: HelperFun.isLight(context) ? LightAppStyles.appbar : DarkAppStyles.appbar,
             ),
           ),

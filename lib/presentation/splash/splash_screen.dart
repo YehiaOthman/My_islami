@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_qauran_app/core/helper_fun.dart';
 import '../../core/assets_manger.dart';
 import '../../core/routes_manger.dart';
 
@@ -12,7 +13,7 @@ class SplashScreen extends StatelessWidget {
     });
     return Scaffold(
         body: Image.asset(
-      AssetsManger.lightSplashScreen,
+      HelperFun.isLight(context) ? AssetsManger.lightSplashScreen : AssetsManger.darkSplashScreen,
       width: double.infinity,
       height: double.infinity,
       fit: BoxFit.fill,
